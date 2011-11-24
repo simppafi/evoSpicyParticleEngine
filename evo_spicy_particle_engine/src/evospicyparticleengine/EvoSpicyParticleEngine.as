@@ -25,10 +25,7 @@
 	import flash.events.KeyboardEvent;
 	import flash.geom.Matrix3D;
 	import org.osflash.signals.Signal;
-	
-	/**
-	 * @author simo
-	 */
+
 	public class EvoSpicyParticleEngine
 	{
 		public var onEngineReady			:Signal;
@@ -109,6 +106,7 @@
 			onEngineReady.dispatch();
 		}
 		
+		
 		// ADD //
 		 
 		private var sharedIndexBuffer:IndexBuffer3D;
@@ -140,6 +138,7 @@
 			
 			if(pendingRenderer) setPendingRenderer();
 		}
+		
 		
 		
 		// CREATE //
