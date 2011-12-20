@@ -28,7 +28,7 @@
 	
 	/**
 	 * @author simo
-	 */
+	 */	
 	public class EvoSpicyParticleEngine
 	{
 		public var onEngineReady			:Signal;
@@ -390,7 +390,7 @@
 		{
 			_aspect = stage.stageWidth/stage.stageHeight;
 			perspective(_fov, _aspect, _zNear, _zFar);
-			context3d.configureBackBuffer((int(stage.stageWidth)&~1), (int(stage.stageHeight)&~1), 0, true);
+			if(context3d) context3d.configureBackBuffer((int(stage.stageWidth)&~1), (int(stage.stageHeight)&~1), 0, true);
 		}
 		
 		

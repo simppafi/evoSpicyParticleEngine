@@ -27,7 +27,7 @@ package evospicyparticleengine.texture {
 			ball.graphics.drawCircle(128 * mul, 178 * mul, 78 * mul * .85);
 			ball.graphics.endFill();
 			bitmapData.draw(ball);
-			bitmapData.applyFilter(bitmapData, bitmapData.rect, bitmapData.rect.topLeft, new BlurFilter(24, 24, 3));
+			bitmapData.applyFilter(bitmapData, bitmapData.rect, bitmapData.rect.topLeft, new BlurFilter(48*mul, 48*mul, 3));
 			texture.uploadFromBitmapData(bitmapData);
 			return texture;
 		}
