@@ -2,7 +2,7 @@ package evospicyparticleengine.buffer {
 	/**
 	 * @author simo
 	 */
-	public class StartPoint3D {
+	public final class StartPoint3D {
 		
 		public var x:Number;
 		public var y:Number;

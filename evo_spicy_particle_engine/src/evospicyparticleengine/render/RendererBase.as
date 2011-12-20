@@ -68,20 +68,20 @@ package evospicyparticleengine.render {
 			this.streamSize = streamSize;
 		}
 		
-		public function addStartPoint(startpoint:StartPoint3D):void
+		public final function addStartPoint(startpoint:StartPoint3D):void
 		{
 			this.startPoints.push(startpoint);
 			startPointsCount = startPoints.length;
 		}
 		
 		private var _streamsizevalue:int;
-		public function set streamSize(value:int):void
+		public final function set streamSize(value:int):void
 		{
 			_streamSize = value * 12;
 			_streamsizevalue = value;
 		}
 		
-		public function get streamSize():int
+		public final function get streamSize():int
 		{
 			return _streamsizevalue;
 		}
@@ -92,16 +92,16 @@ package evospicyparticleengine.render {
 			//Must be overridden										
 		}
 		
-		public function setup(	context:Context3D,
-								camera:Camera3D,
-								texture:Texture,
-								sharedIndexBuffer:IndexBuffer3D,
-								sharedUVBuffer:VertexBuffer3D,
-								buffers:Vector.<BufferParticle>,
-								transformModel:Matrix3D,
-								transformCamera:Matrix3D,
-								transformProjection:Matrix3D,
-								transformParticle:Matrix3D):void
+		public final function setup(context:Context3D,
+									camera:Camera3D,
+									texture:Texture,
+									sharedIndexBuffer:IndexBuffer3D,
+									sharedUVBuffer:VertexBuffer3D,
+									buffers:Vector.<BufferParticle>,
+									transformModel:Matrix3D,
+									transformCamera:Matrix3D,
+									transformProjection:Matrix3D,
+									transformParticle:Matrix3D):void
 		{
 			this.context3d = context;
 			this.camera = camera;
@@ -124,11 +124,11 @@ package evospicyparticleengine.render {
 			this.initialize();
 		}
 		
-		public function setupFiltered(	renderProgram:Program3D,
-										renderTexture:Texture,
-										renderVertexBuffer:VertexBuffer3D,
-										renderIndexBuffer:IndexBuffer3D,
-										renderUVBuffer:VertexBuffer3D):void
+		public final function setupFiltered(	renderProgram:Program3D,
+												renderTexture:Texture,
+												renderVertexBuffer:VertexBuffer3D,
+												renderIndexBuffer:IndexBuffer3D,
+												renderUVBuffer:VertexBuffer3D):void
 		{
 			this.renderProgram = renderProgram;
 			this.renderTexture = renderTexture;
@@ -145,7 +145,7 @@ package evospicyparticleengine.render {
 		
 		
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			this.context3d = null;
 			this.camera = null;

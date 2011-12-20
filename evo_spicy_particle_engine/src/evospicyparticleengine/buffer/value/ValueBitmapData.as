@@ -7,7 +7,7 @@ package evospicyparticleengine.buffer.value {
 	/**
 	 * @author simo
 	 */
-	public class ValueBitmapData implements IValue {
+	public final class ValueBitmapData implements IValue {
 		
 		private var startXMul:Number, startYMul:Number, startZMul:Number, endXMul:Number, endYMul:Number, endZMul:Number;
 		private var size:Number;
@@ -38,7 +38,7 @@ package evospicyparticleengine.buffer.value {
 		private var bufferIndex:int;
 		private var bufferCount:int;
 		private var totalParticleCount:int;
-		public function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
+		public final function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
 		{
 			this.bufferIndex = bufferIndex;
 			this.bufferCount = bufferCount;
@@ -49,7 +49,7 @@ package evospicyparticleengine.buffer.value {
 			if(!data.initialized) data.setup(reso);
 		}
 		
-		public function set(	_positionStartData:Vector.<Number>,
+		public final function set(	_positionStartData:Vector.<Number>,
 								_positionEndData:Vector.<Number>,
 								_moveData:Vector.<Number>,
 								_rgbData:Vector.<Number>,
@@ -155,7 +155,7 @@ package evospicyparticleengine.buffer.value {
 			
 		}
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			data.dispose();
 			data = null;

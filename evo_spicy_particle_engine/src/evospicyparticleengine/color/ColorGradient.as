@@ -7,7 +7,7 @@ package evospicyparticleengine.color {
 	/**
 	 * @author simo
 	 */
-	public class ColorGradient implements IColor {
+	public final class ColorGradient implements IColor {
 		
 		private var colorData:Vector.<Vector.<Number>>;
 		function ColorGradient(colorValue:Array, resolution:int = 4096, darkColors:Array = null, lightColor:Array = null)
@@ -78,18 +78,18 @@ package evospicyparticleengine.color {
 			colors = null;
 		}
 		
-		public function get():Vector.<Vector.<Number>>
+		public final function get():Vector.<Vector.<Number>>
 		{
 			return colorData;
 		}
 		
 		private var _resolution:int;
-		public function get resolution():int
+		public final function get resolution():int
 		{
 			return _resolution;
 		}
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			colorData = null;
 		}

@@ -6,7 +6,7 @@ package evospicyparticleengine.buffer {
 	/**
 	 * @author simo
 	 */
-	public class BufferParticle {
+	public final class BufferParticle {
 		
 		public static const BUFFER_SIZE		:int = 21845;
 		
@@ -52,12 +52,12 @@ package evospicyparticleengine.buffer {
 		public var goal						:int = 0;
 		public var _dataSize				:int; 
 		public var _streamSize:int;
-		public function setStreamSize(value:int):void
+		public final function setStreamSize(value:int):void
 		{
 			_streamSize = 12 * value;
 		}
 		
-		public function setup(context3d:Context3D):void
+		public final function setup(context3d:Context3D):void
 		{
 			createVertexBuffer(context3d);
 			setStreamSize(24);
@@ -99,7 +99,7 @@ package evospicyparticleengine.buffer {
 		}
 		
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			
 		}

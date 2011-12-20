@@ -4,7 +4,7 @@ package evospicyparticleengine.buffer.value.data {
 	/**
 	 * @author simo
 	 */
-	public class DataPerlin implements IData {
+	public final class DataPerlin implements IData {
 		
 		private var bits:Vector.<BitmapData>;
 		private var offset:Array;
@@ -26,13 +26,13 @@ package evospicyparticleengine.buffer.value.data {
 		}
 		
 		private var _initialized:Boolean = false;
-		public function get initialized():Boolean { return _initialized; }
+		public final function get initialized():Boolean { return _initialized; }
 		
-		public function get bit0():BitmapData { return bits[0]; }
-		public function get bit1():BitmapData { return bits[1]; }
-		public function get bit2():BitmapData { return bits[2]; }
+		public final function get bit0():BitmapData { return bits[0]; }
+		public final function get bit1():BitmapData { return bits[1]; }
+		public final function get bit2():BitmapData { return bits[2]; }
 		
-		public function setup(reso:int):void
+		public final function setup(reso:int):void
 		{
 			var s:int = int(reso+1);
 			bits[0] = new BitmapData(s, s, false, 0);
@@ -42,7 +42,7 @@ package evospicyparticleengine.buffer.value.data {
 			_initialized = true;
 		}
 		
-		public function execute(bufferIndex:int):void
+		public final function execute(bufferIndex:int):void
 		{
 			offset[0]["x"] = bufferIndex * mulAx;
 			offset[0]["y"] = bufferIndex * mulAy;
@@ -54,7 +54,7 @@ package evospicyparticleengine.buffer.value.data {
 			bits[2].perlinNoise(sizeC, sizeC, 2, Math.random(), true, true, 1, true, offset);
 		}
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			offset = null;
 			bits[0].dispose();

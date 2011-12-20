@@ -9,7 +9,7 @@ package evospicyparticleengine.render {
 	/**
 	 * @author simo
 	 */
-	public class RendererLinear extends RendererBase {
+	public final class RendererLinear extends RendererBase {
 		
 		public var color_r:Number;
 		public var color_g:Number;
@@ -66,7 +66,7 @@ package evospicyparticleengine.render {
 		private var time:Number = 0;
 		private var bufferpos:int = 0;
 		private var dataSize:int = (buffer_vertice_count / 3) * 12;
-		override public function render():void
+		override public final function render():void
 		{
 			// CAMERA
 			transformCamera.identity();

@@ -29,7 +29,7 @@
 	/**
 	 * @author simo
 	 */	
-	public class EvoSpicyParticleEngine
+	public final class EvoSpicyParticleEngine
 	{
 		public var onEngineReady			:Signal;
 		public var onGPUInfo				:Signal;

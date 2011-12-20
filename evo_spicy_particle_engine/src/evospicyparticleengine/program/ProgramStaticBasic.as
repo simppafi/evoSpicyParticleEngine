@@ -6,14 +6,14 @@ package evospicyparticleengine.program {
 	/**
 	 * @author simo
 	 */
-	public class ProgramStaticBasic implements IProgram {
+	public final class ProgramStaticBasic implements IProgram {
 		
 		function ProgramStaticBasic():void
 		{
 			
 		}
 		
-		public function get(context3d:Context3D):Program3D
+		public final function get(context3d:Context3D):Program3D
 		{
 			// SHADERS
 			var agalVertexSource : String = 	"" +

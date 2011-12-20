@@ -4,7 +4,7 @@ package evospicyparticleengine.buffer.value {
 	/**
 	 * @author simo
 	 */
-	public class ValueExplosionSphere implements IValue {
+	public final class ValueExplosionSphere implements IValue {
 		
 		private var startXRadius:Number, startYRadius:Number, startZRadius:Number, endXRadius:Number, endYRadius:Number, endZRadius:Number;
 		private var size:Number;
@@ -31,14 +31,14 @@ package evospicyparticleengine.buffer.value {
 		private var bufferIndex:int;
 		private var bufferCount:int;
 		private var totalParticleCount:int;
-		public function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
+		public final function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
 		{
 			this.bufferIndex = bufferIndex;
 			this.bufferCount = bufferCount;
 			this.totalParticleCount = totalParticleCount;
 		}
 		
-		public function set(	_positionStartData:Vector.<Number>,
+		public final function set(	_positionStartData:Vector.<Number>,
 								_positionEndData:Vector.<Number>,
 								_moveData:Vector.<Number>,
 								_rgbData:Vector.<Number>,
@@ -139,7 +139,7 @@ package evospicyparticleengine.buffer.value {
 			
 			
 		}
-		public function dispose():void
+		public final function dispose():void
 		{
 			colors.dispose();
 			colors = null;

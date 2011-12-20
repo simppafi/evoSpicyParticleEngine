@@ -7,7 +7,7 @@ package evospicyparticleengine.texture {
 	/**
 	 * @author simo
 	 */
-	public class TextureParticleAlphaKill implements ITextureParticle {
+	public final class TextureParticleAlphaKill implements ITextureParticle {
 		
 		private var resolution:int;
 		
@@ -16,7 +16,7 @@ package evospicyparticleengine.texture {
 			this.resolution = resolution;
 		}
 		
-		public function get(context3d:Context3D, texture:Texture):Texture
+		public final function get(context3d:Context3D, texture:Texture):Texture
 		{
 			var mul:Number = resolution/256;
 			texture = context3d.createTexture( resolution, resolution, Context3DTextureFormat.BGRA, false);

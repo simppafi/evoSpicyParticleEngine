@@ -4,7 +4,7 @@ package evospicyparticleengine.buffer.value {
 	/**
 	 * @author simo
 	 */
-	public class ValueExplosionCube implements IValue {
+	public final class ValueExplosionCube implements IValue {
 		
 		private var startXRadius:Number, startYRadius:Number, startZRadius:Number, endXRadius:Number, endYRadius:Number, endZRadius:Number;
 		private var size:Number;
@@ -31,20 +31,20 @@ package evospicyparticleengine.buffer.value {
 		private var bufferIndex:int;
 		private var bufferCount:int;
 		private var totalParticleCount:int;
-		public function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
+		public final function setup(bufferIndex:int, bufferCount:int, totalParticleCount:int):void
 		{
 			this.bufferIndex = bufferIndex;
 			this.bufferCount = bufferCount;
 			this.totalParticleCount = totalParticleCount;
 		}
 		
-		public function set(	_positionStartData:Vector.<Number>,
-								_positionEndData:Vector.<Number>,
-								_moveData:Vector.<Number>,
-								_rgbData:Vector.<Number>,
-								_positionStartOffset:Vector.<Number>,
-								_positionEndOffset:Vector.<Number>,
-								countParticles:int):void
+		public final function set(	_positionStartData:Vector.<Number>,
+									_positionEndData:Vector.<Number>,
+									_moveData:Vector.<Number>,
+									_rgbData:Vector.<Number>,
+									_positionStartOffset:Vector.<Number>,
+									_positionEndOffset:Vector.<Number>,
+									countParticles:int):void
 		{
 			
 			var move0:Number, move1:Number, move2:Number, move3:Number;
@@ -131,7 +131,7 @@ package evospicyparticleengine.buffer.value {
 			
 		}
 		
-		public function dispose():void
+		public final function dispose():void
 		{
 			this.colors.dispose();
 			this.colors = null;

@@ -7,7 +7,7 @@ package evospicyparticleengine.render {
 	/**
 	 * @author simo
 	 */
-	public class RendererStatic extends RendererBase {
+	public final class RendererStatic extends RendererBase {
 		
 		public var color_r:Number;
 		public var color_g:Number;
@@ -43,7 +43,7 @@ package evospicyparticleengine.render {
 			
 		}
 		
-		override public function render():void
+		override public final function render():void
 		{
 			// CAMERA
 			transformCamera.identity();

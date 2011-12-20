@@ -7,7 +7,7 @@ package evospicyparticleengine.program {
 	/**
 	 * @author simo
 	 */
-	public class ProgramLinear implements IProgram {
+	public final class ProgramLinear implements IProgram {
 		
 		private var ease:int;
 		private var fromFullBright:Boolean;
@@ -20,7 +20,7 @@ package evospicyparticleengine.program {
 			this.dimmDuringLife = dimmDuringLife;
 		}
 		
-		public function get(context3d:Context3D):Program3D
+		public final function get(context3d:Context3D):Program3D
 		{
 			var _constVertex:Vector.<Number>;
 			
